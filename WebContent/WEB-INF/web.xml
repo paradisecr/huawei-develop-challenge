@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:web="http://java.sun.com/xml/ns/javaee" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Web Topology </display-name>
+  <description>Demonstration of Topology features</description>
+  <welcome-file-list>
+    <welcome-file>login.html</welcome-file>
+  </welcome-file-list>
+  
+   <servlet>
+    <description></description>
+    <display-name>TopologyServlet</display-name>
+    <servlet-name>TopologyServlet</servlet-name>
+    <servlet-class>com.huawei.sdndev.pce.servlet.TopologyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TopologyServlet</servlet-name>
+    <url-pattern>/topologyservlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>SaveLocation</display-name>
+    <servlet-name>SaveLocation</servlet-name>
+    <servlet-class>com.huawei.sdndev.pce.servlet.SaveLocationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SaveLocation</servlet-name>
+    <url-pattern>/savelocation</url-pattern>
+  </servlet-mapping>
+   
+  <servlet>
+    <description></description>
+    <display-name>TestXML</display-name>
+    <servlet-name>TestXML</servlet-name>
+    <servlet-class>com.huawei.sdndev.pce.servlet.TestXMLServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestXML</servlet-name>
+    <url-pattern>/testxml</url-pattern>
+  </servlet-mapping>
+   
+  <servlet>
+    <description></description>
+    <display-name>LspInfos</display-name>
+    <servlet-name>LspInfos</servlet-name>
+    <servlet-class>com.huawei.sdndev.pce.servlet.LspInfosServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LspInfos</servlet-name>
+    <url-pattern>/lspinfos</url-pattern>
+  </servlet-mapping>
+     
+  <servlet>
+    <description></description>
+    <display-name>LinkConstraintsServlet</display-name>
+    <servlet-name>LinkConstraintsServlet</servlet-name>
+    <servlet-class>com.huawei.sdndev.pce.servlet.LinkConstraintsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LinkConstraintsServlet</servlet-name>
+    <url-pattern>/LinkConstraintsServlet</url-pattern>
+  </servlet-mapping>
+     
+  <servlet>
+    <description></description>
+    <display-name>TunnelBandwidthServlet</display-name>
+    <servlet-name>TunnelBandwidthServlet</servlet-name>
+    <servlet-class>com.huawei.sdndev.pce.servlet.TunnelBandwidthServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TunnelBandwidthServlet</servlet-name>
+    <url-pattern>/TunnelBandwidthServlet</url-pattern>
+  </servlet-mapping>
+     
+  <servlet>
+    <description></description>
+    <display-name>PceReoptimizationServlet</display-name>
+    <servlet-name>PceReoptimizationServlet</servlet-name>
+    <servlet-class>com.huawei.sdndev.pce.servlet.PceReoptimizationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PceReoptimizationServlet</servlet-name>
+    <url-pattern>/PceReoptimizationServlet</url-pattern>
+  </servlet-mapping>
+     
+  <servlet>
+    <description></description>
+    <display-name>SelectModelServlet</display-name>
+    <servlet-name>SelectModelServlet</servlet-name>
+    <servlet-class>com.huawei.sdndev.pce.servlet.SelectModelServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SelectModelServlet</servlet-name>
+    <url-pattern>/SelectModelServlet</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

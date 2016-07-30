@@ -1,0 +1,208 @@
+ul,ol{
+	margin:0 auto;
+}
+
+bk-info p{
+	margin:0 auto;
+	min-height:20px;
+}
+.modal-body{
+	max-height:760px;
+}
+.modal.fade.in {
+	top: 1%;
+}
+.modal {
+	left: 1%;	
+}
+.main, .container > header {
+width: 90%;
+max-width: 1060px;
+margin: 0 auto;
+position: relative;
+}
+
+.book-2 .bk-front > div,
+.book-2 .bk-back,
+.book-2 .bk-left,
+.book-2 .bk-front:after {
+	background-color: black;
+}
+
+.book-2 .bk-cover {
+	background-image: url(../images/2.png);	
+	background-repeat: no-repeat;
+	background-position: 10px 40px;
+}
+
+.book-2 .bk-cover h2 {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	padding: 11px 0 0 15px;
+	background: rgba(255,255,255,0.2);
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+}
+
+.book-2 .bk-cover h2 span:first-child,
+.book-2 .bk-left h2 span:first-child {
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 13px;
+	padding-right: 20px;
+}
+
+.book-2 .bk-cover h2 span:first-child {
+	display: block;
+}
+
+.book-2 .bk-cover h2 span:last-child,
+.book-2 .bk-left h2 span:last-child {
+	font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+} 
+
+.book-2 .bk-content p {
+	font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.book-2 .bk-left h2 {
+	color: #fff;
+	font-size: 15px;
+	line-height: 40px;
+	padding-right: 10px;
+	text-align: right;
+}
+
+.book-2 .bk-back p {
+	color: #fff;
+	font-size: 13px;
+	padding: 40px;
+	text-align: center;
+	font-weight: 700;
+}
+
+
+.book-1 .bk-front > div,
+.book-1 .bk-back,
+.book-1 .bk-left,
+.book-1 .bk-front:after {
+	background-color: #ff924a;
+}
+
+.book-1 .bk-cover {
+	background-image: url(../images/1.png);	
+	background-repeat: no-repeat;
+	background-position: 10px 40px;
+}
+
+.book-1 .bk-cover h2 {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	padding: 5px 0 0 15px;
+	background: rgba(255,255,255,0.2);
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+}
+
+.book-1 .bk-cover h2 span:first-child,
+.book-1 .bk-left h2 span:first-child {
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 13px;
+	padding-right: 20px;
+}
+
+.book-1 .bk-cover h2 span:first-child {
+	display: block;
+}
+
+.book-1 .bk-cover h2 span:last-child,
+.book-1 .bk-left h2 span:last-child {
+	font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+} 
+
+.book-1 .bk-content p {
+	font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.book-1 .bk-left h2 {
+	color: #fff;
+	font-size: 15px;
+	line-height: 40px;
+	padding-right: 10px;
+	text-align: right;
+}
+
+.book-1 .bk-back p {
+	color: #fff;
+	font-size: 13px;
+	padding: 40px;
+	text-align: center;
+	font-weight: 700;
+}
+
+
+.book-3 .bk-front > div,
+.book-3 .bk-back,
+.book-3 .bk-left,
+.book-3 .bk-front:after {
+	background-color: #a4c19e;
+}
+
+.book-3 .bk-cover {
+	background-image: url(../images/3.png);	
+	background-repeat: no-repeat;
+	background-position: 10px 40px;
+}
+
+.book-3 .bk-cover h2 {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	padding: 5px 0 0 15px;
+	background: rgba(255,255,255,0.2);
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+}
+
+.book-3 .bk-cover h2 span:first-child,
+.book-3 .bk-left h2 span:first-child {
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 13px;
+	padding-right: 20px;
+}
+
+.book-3 .bk-cover h2 span:first-child {
+	display: block;
+}
+
+.book-3 .bk-cover h2 span:last-child,
+.book-3 .bk-left h2 span:last-child {
+	font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+} 
+
+.book-3 .bk-content p {
+	font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.book-3 .bk-left h2 {
+	color: #fff;
+	font-size: 15px;
+	line-height: 40px;
+	padding-right: 10px;
+	text-align: right;
+}
+
+.book-3 .bk-back p {
+	color: #fff;
+	font-size: 13px;
+	padding: 40px;
+	text-align: center;
+	font-weight: 700;
+}

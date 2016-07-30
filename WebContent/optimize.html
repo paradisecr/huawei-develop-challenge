@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>北邮参赛项目</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="" />
+		<meta name="author" content="Olas Navigator" />
+
+		<!-- required styles -->
+		<link href="library/assets/css/bootstrap.css" rel="stylesheet" />
+		<link href="library/assets/css/bootstrap-responsive.css" rel="stylesheet" />
+		<link href="library/css/styles.css" rel="stylesheet" />
+		
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <!-- 拓扑图 -->
+	<script language="javascript" type="text/javascript">
+	$(document).ready(function(){                    
+            var canvas = document.getElementById('canvas');
+            var stage = new JTopo.Stage(canvas);
+            //显示工具栏
+            showJTopoToobar(stage);
+            var scene = new JTopo.Scene();
+            scene.shadow = false;
+            scene.background = './img/bg.jpg';
+            stage.add(scene);
+            
+            var nodes = [];
+            // 圆心节点
+            var circleNode = new JTopo.CircleNode();
+            circleNode.fillStyle = JTopo.util.randomColor();
+            scene.add(circleNode);
+            
+            // 三个控制点
+            for(var i=0; i<3; i++){
+                var node = new JTopo.Node();
+                node.fillStyle = JTopo.util.randomColor();
+                node.setLocation(100 + Math.random() * 500, 100 + Math.random() * 400);
+                scene.add(node);
+                nodes.push(node);
+            }
+            for(var i=0; i<nodes.length; i++){
+                scene.add(new JTopo.Link(circleNode, nodes[i]));
+            }
+            
+            // 定义效果
+            var effect = JTopo.Effect.spring();
+            
+            // 效果作用对象
+            for(var i=0; i<nodes.length; i++){
+                // 圆心节点同时于三个控制节点产生弹性
+                effect.addNode(circleNode, nodes[i]);
+            }
+            // 播放
+            effect.play();
+        });
+	</script>
+    <!-- 拓扑图end -->
+    <body>
+		
+		<!-- header -->
+		<div id="header" class="navbar">
+			<div class="navbar-inner">
+				<!-- company or app name -->
+				<a class="brand hidden-phone" href="#">HUA WEI-BUPT 参赛项目</a>
+				
+				<!-- nav icons -->
+				
+				
+				<ul class="nav pull-right">
+					
+					<!-- dropdown user account -->
+					<li class="dropdown">
+                    
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<span style="font-size: 14px;margin-right: 20px;">登录者</span><i class="icon-large icon-off"></i>
+						</a>
+						
+						<ul class="dropdown-menu dropdown-user-account">
+						
+							<li class="account-img-container">
+								<img class="thumb account-img" src="library/images/100/07.png" />
+							</li>
+							
+							<li class="account-info">
+								<h3>Geunevere Calista</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								<p>
+									<a href="#">Edit</a> | <a href="#">Account Settings</a>
+								</p>
+							</li>
+							
+							<li class="account-footer">
+								<div class="row-fluid">
+								
+									<div class="span8">
+										<a class="btn btn-small btn-primary btn-flat" href="#">Change avatar</a>
+									</div>
+									
+									<div class="span4 align-right">
+										<a class="btn btn-small btn-danger btn-flat" href="#">Logout</a>
+									</div>
+									
+								</div>									
+							</li>
+							
+						</ul>
+					</li>
+					<!-- ./ dropdown user account -->
+				</ul>
+				
+				
+			</div>
+		</div>
+		<!-- end header -->			
+		
+		<div id="left_layout">
+			<!-- main content -->
+			<div id="main_content" class="container-fluid">
+			
+				<!-- page heading -->
+				<div class="page-heading">
+				
+					<h2 class="page-title muted">
+						<i class="icon-table"></i> 调优
+					</h2>
+					
+					<div class="page-info hidden-phone">
+						<ul class="stats">
+							<li>
+								<span class="large text-warning">4</span>
+								<span class="mini muted">连接数</span>
+							</li>
+							<li>
+								<span class="large text-info">523</span>
+								<span class="mini muted">平均带宽</span>
+							</li>
+							<li>
+								<span class="large text-success">80%</span>
+								<span class="mini muted">宽带利用率</span>
+							</li>
+							<li>
+								<span class="large text-error">15</span>
+								<span class="mini muted">平均等待时长</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- ./ page heading -->
+				
+				
+				
+				<!-- post wrapper -->				
+				
+					
+						<!-- widget -->
+                        
+						<div class="well widget">
+					<div class="widget-header">
+						<h3 class="title" style="font-family: 黑体">拓扑图</h3>
+					</div>
+					<div id="canvas" style="width:90%;height:200px;"></div>
+						
+				</div>
+                        
+              <div class="row-fluid">
+				<div class="span6">
+                           
+				  <div class="well widget">
+							<!-- widget header -->
+							<div class="widget-header">
+								<h3 class="title" style="font-family: 黑体">链路状态</h3>
+							</div>
+							<!-- ./ widget header -->
+
+							<!-- widget content -->
+							<div class="widget-content">					
+								<table class="table">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th align="center" valign="middle" style="font-family: 黑体;font-size: 14px;font-weight: bold;text-align: center;">路径</th>
+											<th colspan="2" align="center" valign="middle" style="font-family: 黑体;font-size: 14px;font-weight: bold;text-align: center;">门限贷款</th>
+											<th align="center" valign="middle" style="font-family: 黑体;font-size: 14px;font-weight: bold;text-align: center;">操作</th>
+										</tr>
+                                        <tr>
+											<th></th>
+											<th align="center" valign="middle" style="font-family: 黑体;font-size: 12px;font-weight: bold;"></th>
+											<th align="center" valign="middle" style="font-family: 黑体;font-size: 12px;font-weight: bold;text-align: center;">原始值</th>
+                                            <th align="center" valign="middle" style="font-family: 黑体;font-size: 12px;font-weight: bold;text-align: center;">当前值</th>
+											<th align="center" valign="middle" style="font-family: 黑体;font-size: 12px;font-weight: bold;"></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center;">1</td>
+											<td style="text-align: center;">Mark</td>
+											<td style="text-align: center;">11</td>
+                                            <td style="text-align: center;"><input type="text" placeholder="11" style="height:14px;width: 110px;" /></td>
+											<td style="text-align: center;"><a class="btn btn-mini btn-primary" href="#">mini</a></td>
+										</tr>
+										<tr>
+											<td style="text-align: center;">1</td>
+											<td style="text-align: center;">Mark</td>
+											<td style="text-align: center;">11</td>
+                                            <td style="text-align: center;"><input type="text" placeholder="11" style="height:14px;width: 110px;" /></td>
+											<td style="text-align: center;"><a class="btn btn-mini btn-primary" href="#">mini</a></td>
+										</tr>
+										<tr>
+											<td style="text-align: center;">1</td>
+											<td style="text-align: center;">Mark</td>
+											<td style="text-align: center;">11</td>
+                                            <td style="text-align: center;"><input type="text" placeholder="11" style="height:14px;width: 110px;" /></td>
+											<td style="text-align: center;"><a class="btn btn-mini btn-primary" href="#">mini</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- ./ widget content -->
+					</div>
+					<!-- ./ widget -->
+						
+					<!-- widget -->
+					<!-- ./ widget -->
+						
+					<!-- widget -->
+					<!-- ./ widget -->
+						
+				  </div>
+				   <div class="span6">
+						<!-- widget -->
+				     <div class="well widget">
+							<!-- widget header -->
+							<div class="widget-header">
+								<h3 class="title" style="font-family: 黑体">调优</h3>
+							</div>
+							<!-- ./ widget header -->
+							<h4>全局调优</h4>
+                            <div class="alert alert-block alert-info">
+								<strong>说明：</strong>啊手动阀手动阀手动阀啊手动阀手动阀手动阀啊手动阀手动阀手动阀啊手动阀手动阀实打实的发手动阀手动阀手动阀啊手动阀手动阀
+                                
+                            <ul class="listing" style="margin-top: 15px;text-align: center;">
+                                <li><a class="btn circle-item btn-primary" href="#"><i class="micon-link"></i></a></li>
+                            </ul>
+							</div>
+                            
+                            <hr />
+                            <h4>VIP调优</h4>
+					   <!-- widget content -->
+							<div class="widget-content">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th align="center" valign="middle">#</th>
+											<th colspan="2" align="center" valign="middle" style="font-family: 黑体;font-size: 14px;font-weight: bold;text-align: center;">贷款约束</th>
+                                            <th colspan="2" align="center" valign="middle" style="font-family: 黑体;font-size: 14px;font-weight: bold;text-align: center;">优先级</th>
+                                            <th colspan="2" align="center" valign="middle" style="font-family: 黑体;font-size: 14px;font-weight: bold;text-align: center;">亲和属性</th>
+											<th align="center" valign="middle" style="font-family: 黑体;font-size: 14px;font-weight: bold;">操作</th>
+                                        </tr>
+                                        <tr>
+											<th align="center" valign="middle" style="width:10%;"></th>
+											<th align="center" valign="middle" style="font-family: 黑体;font-size: 12px;font-weight: bold;">原始值</th>
+											<th align="center" valign="middle" style="font-family: 黑体;font-size: 12px;font-weight: bold;">当前值</th>
+                                            <th align="center" valign="middle" style="font-family: 黑体;font-size: 12px;font-weight: bold;">原始值</th>
+                                            <th align="center" valign="middle" style="font-family: 黑体;font-size: 12px;font-weight: bold;">当前值</th>
+                                            <th align="center" valign="middle" style="font-family: 黑体;font-size: 12px;font-weight: bold;">原始值</th>
+                                            <th align="center" valign="middle" style="font-family: 黑体;font-size: 12px;font-weight: bold;">当前值</th>
+                                            <th align="center" valign="middle" style="font-family: 黑体;font-size: 14px;font-weight: bold;"></th>
+                                      </tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>Mark</td>
+                                            <td><input type="text" placeholder="11" style="height:14px;width: 50px;" /></td>
+											<td>11</td>
+                                            <td><input type="text" placeholder="11" style="height:14px;width: 50px;" /></td>
+                                            <td>Mark</td>
+											<td><input type="text" placeholder="11" style="height:14px;width: 50px;" /></td>
+                                            <td><a class="btn btn-mini btn-primary" href="#">mini</a></td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>Mark</td>
+                                            <td><input type="text" placeholder="11" style="height:14px;width: 50px;" /></td>
+											<td>11</td>
+                                            <td><input type="text" placeholder="11" style="height:14px;width: 50px;" /></td>
+                                            <td>Mark</td>
+											<td><input type="text" placeholder="11" style="height:14px;width: 50px;" /></td>
+                                            <td><a class="btn btn-mini btn-primary" href="#">mini</a></td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>Mark</td>
+                                            <td><input type="text" placeholder="11" style="height:14px;width: 50px;" /></td>
+											<td>11</td>
+                                            <td><input type="text" placeholder="11" style="height:14px;width: 50px;" /></td>
+                                            <td>Mark</td>
+											<td><input type="text" placeholder="11" style="height:14px;width: 50px;" /></td>
+                                            <td><a class="btn btn-mini btn-primary" href="#">mini</a></td>
+										</tr>
+									</tbody>
+								</table>
+			      </div>
+							<!-- ./ widget content -->
+					   </div>
+					   <!-- ./ widget -->
+						
+					   <!-- widget -->
+					   <!-- ./ widget -->
+						
+					   <!-- widget -->
+					   <!-- ./ widget -->
+						
+					</div>
+				</div>
+				<!-- ./ post wrapper -->
+			</div>
+			<!-- end main content -->
+			
+			<!-- sidebar -->
+			<ul id="sidebar" class="nav nav-pills nav-stacked">
+				<li class="avatar hidden-phone active"></li>
+				<li>
+					<a href="monitor.html">
+						<i class="micon-screen"></i>
+						<span class="hidden-phone">监控</span>
+					</a>
+				</li>
+				<li>
+					<a href="network.html">
+						<i class="micon-stats-up"></i>
+						<span class="hidden-phone">网络</span>
+					</a>
+				</li>
+				
+				<li class="active">
+					<a href="optimize.html">
+						<i class="micon-checkbox"></i>
+						<span class="hidden-phone">调优</span>
+					</a>
+					
+				</li>
+				
+			</ul>
+			<!-- end sidebar -->
+		</div>
+		
+		<!-- external api -->
+		
+		<!-- base -->
+		<script src="library/assets/js/jquery.js"></script>
+		<script src="library/assets/js/bootstrap.min.js"></script>
+		
+		<!-- addons -->
+		<script src="library/plugins/chart-plugins.js"></script>
+		<script src="library/plugins/jquery-ui-slider.js"></script>
+		<script src="library/plugins/redactor/redactor.min.js"></script>
+		<script src="library/plugins/jmapping/markermanager.js"></script>
+		<script src="library/plugins/jmapping/StyledMarker.js"></script>
+		<script src="library/plugins/jmapping/jquery.metadata.js"></script>
+		<script src="library/plugins/jmapping/jquery.jmapping.min.js"></script>
+		<script src="library/plugins/jquery.uniform.js"></script>
+		<script src="library/plugins/chosen.jquery.min.js"></script>
+		<script src="library/plugins/bootstrap-datepicker.js"></script>
+		<script src="library/plugins/jquery.timePicker.min.js"></script>
+				
+		<!-- plugins loader -->
+		<script src="library/js/loader.js"></script>
+	</body>
+</html>
