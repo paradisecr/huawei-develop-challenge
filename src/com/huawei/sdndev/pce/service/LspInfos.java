@@ -61,6 +61,8 @@ public class LspInfos {
             String pccClientIpAddress = JsonElementGetter.getValueString(lspInfo, "pccClientIpAddress");
             String symPathName = JsonElementGetter.getValueString(lspInfo, "symPathName"); 
             String lspState = JsonElementGetter.getValueString(lspInfo, "lspState"); 
+            String setupPriority = JsonElementGetter.getValueString(lspInfo, "setupPriority","0");
+            String affinityIncludeAny = JsonElementGetter.getValueString(lspInfo, "affinityIncludeAny","0x0");
             String bandWidthCt0 = JsonElementGetter.getValueString(lspInfo, "bandWidthCt0","0");
             JSONArray ja = new JSONArray();
             
@@ -76,9 +78,13 @@ public class LspInfos {
 	                    jo.put("lspState", lspState);
 	                    jo.put("from", nodeId); 
 	                    jo.put("bandWidthCt0", bandWidthCt0);
+	                    jo.put("setupPriority", setupPriority); 
+	                    jo.put("affinityIncludeAny", affinityIncludeAny);
 	                }else{
 						jo.put("to", nodeId);
 	                    jo.put("bandWidthCt0", bandWidthCt0);
+	                    jo.put("setupPriority", setupPriority); 
+	                    jo.put("affinityIncludeAny", affinityIncludeAny);
 	                    ja.add(jo);
 	                }
 	            }
@@ -88,6 +94,8 @@ public class LspInfos {
                 jo.put("title", pccClientIpAddress);
                 jo.put("lspState", lspState);
                 jo.put("bandWidthCt0", bandWidthCt0);
+                jo.put("setupPriority", Integer.valueOf(setupPriority)); 
+                jo.put("affinityIncludeAny", Long.valueOf(affinityIncludeAny));
                 ja.add(jo);
             }
             outja.add(ja);
