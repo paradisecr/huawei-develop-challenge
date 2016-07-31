@@ -136,11 +136,11 @@
 							<div class="widget-header">
 								<h3 class="title">链路列表</h3>
 							</div>
-							<div class="widget-content">					
+							<div class="widget-content" id="linkTable">					
 								<table class="table">
 									<thead>
 										<tr>
-											<th>#</th>
+											<th style="font-family: 黑体;font-size: 14px;font-weight: bold;">序号</th>
 											<th style="font-family: 黑体;font-size: 14px;font-weight: bold;">ID</th>
 											<th style="font-family: 黑体;font-size: 14px;font-weight: bold;">带宽</th>
                                             <th style="font-family: 黑体;font-size: 14px;font-weight: bold;">时延</th>
@@ -149,30 +149,30 @@
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td>1</td>
-											<td>ID</td>
-											<td>11</td>
-                                            <td>50%</td>
-											<td>70</td>
-                                            <td>70</td>
-										</tr>
-										<tr>
-											<td>1</td>
-											<td>ID</td>
-											<td>11</td>
-                                            <td>50%</td>
-											<td>70</td>
-                                            <td>70</td>
-										</tr>
-										<tr>
-											<td>1</td>
-											<td>ID</td>
-											<td>11</td>
-                                            <td>50%</td>
-											<td>70</td>
-                                            <td>70</td>
-										</tr>
+<!-- 										<tr> -->
+<!-- 											<td>序号</td> -->
+<!--                                             <td>ID</td> -->
+<!-- 											<td>带宽</td> -->
+<!-- 											<td>时延</td> -->
+<!-- 											<td>亲和属性</td> -->
+<!--                                             <td>门限带宽</td> -->
+<!-- 										</tr> -->
+<!-- 										<tr> -->
+<!-- 											<td>1</td> -->
+<!-- 											<td>ID</td> -->
+<!-- 											<td>11</td> -->
+<!--                                             <td>50%</td> -->
+<!-- 											<td>70</td> -->
+<!--                                             <td>70</td> -->
+<!-- 										</tr> -->
+<!-- 										<tr> -->
+<!-- 											<td>1</td> -->
+<!-- 											<td>ID</td> -->
+<!-- 											<td>11</td> -->
+<!--                                             <td>50%</td> -->
+<!-- 											<td>70</td> -->
+<!--                                             <td>70</td> -->
+<!-- 										</tr> -->
 									</tbody>
 								</table>
 							</div>
@@ -183,11 +183,11 @@
 							<div class="widget-header">
 								<h3 class="title">路由器列表</h3>
 							</div>
-							<div class="widget-content">					
+							<div class="widget-content" id="routerTable">					
 								<table class="table">
 									<thead>
 										<tr>
-											<th>#</th>
+											<th style="font-family: 黑体;font-size: 14px;font-weight: bold;">序号</th>
 											<th style="font-family: 黑体;font-size: 14px;font-weight: bold;">路由器</th>
 											<th style="font-family: 黑体;font-size: 14px;font-weight: bold;">状态</th>
 										</tr>
@@ -195,18 +195,23 @@
 									<tbody>
 										<tr>
 											<td>1</td>
-											<td>Mark</td>
-											<td>70</td>
+											<td>R1</td>
+											<td>UP</td>
 										</tr>
 										<tr>
 											<td>2</td>
-											<td>Jacob</td>
-											<td>50</td>
+											<td>R2</td>
+											<td>UP</td>
 										</tr>
 										<tr>
 											<td>3</td>
-											<td>Larry</td>
-											<td>85</td>
+											<td>R3</td>
+											<td>UP</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>R4</td>
+											<td>UP</td>
 										</tr>
 									</tbody>
 								</table>
@@ -218,7 +223,7 @@
 							<div class="widget-header">
 								<h3 class="title">隧道列表</h3>
 							</div>
-							<div class="widget-content">					
+							<div class="widget-content" id="tunnelTable">					
 								<table class="table">
 									<thead>
 										<tr>
@@ -232,24 +237,52 @@
 									<tbody>
 										<tr>
 											<td>1</td>
-											<td>Mark</td>
+											<td>tunnel1</td>
 											<td>30</td>
-                                            <td>50%</td>
-											<td>70</td>
+                                            <td>R1-R2-R3</td>
+											<td>0X0</td>
 										</tr>
 										<tr>
 											<td>2</td>
-											<td>Jacob</td>
+											<td>tunnel2</td>
 											<td>30</td>
-                                            <td>50%</td>
-											<td>50</td>
+                                            <td>R1-R2-R3</td>
+											<td>0X0</td>
 										</tr>
 										<tr>
 											<td>3</td>
-											<td>Larry</td>
+											<td>tunnel3</td>
 											<td>30</td>
-                                            <td>50%</td>
-											<td>85</td>
+                                            <td>R1-R2-R3</td>
+											<td>0X0</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>tunnel4</td>
+											<td>30</td>
+                                            <td>R1-R2-R3</td>
+											<td>0X0</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>tunnel5</td>
+											<td>30</td>
+                                            <td>R1-R2-R3</td>
+											<td>0X0</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>tunnel6</td>
+											<td>30</td>
+                                            <td>R1-R2-R3</td>
+											<td>0X0</td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td>tunnel7</td>
+											<td>30</td>
+                                            <td>R1-R2-R3</td>
+											<td>0X0</td>
 										</tr>
 									</tbody>
 								</table>
@@ -412,9 +445,82 @@
 				}
 				
 				getsize();
-	
+				sendData("linkInfoList",'',"GET",true, fillLinkTable);
+
 			});
 	
+			
+			
+			/* =======================Ryan code begins... ====================*/
+			// about to implement the get data interface..
+				
+			function sendData(url, data, type, async, successFunc, errorFunc) {
+		        async = (async==null || async=="" || typeof(async)=="undefined")? "true" : async;
+		        type = (type==null || type=="" || typeof(type)=="undefined")? "post" : type;
+		        $.ajax({
+		            type: type,
+		            async: async,
+		            data: data,
+		            url: url,
+		            /* dataType: dataType, */
+		            success: function(data){
+		                /* successFunc(); */
+		            	successFunc(data);              
+		            },
+		            error: function(e){
+		                alert('error');
+		            }
+		        });
+		    }
+
+//		 	<div class="widget-content">					
+//		 	<table class="table" id="linkStateTable">
+//		 		<thead>
+//		 			<tr>
+//		 				<th>序号</th>
+//		 				<th style="font-family: 黑体;font-size: 14px;font-weight: bold;">链路</th>
+//		 				<th style="font-family: 黑体;font-size: 14px;font-weight: bold;">带宽利用率</th>
+//		                 <th style="font-family: 黑体;font-size: 14px;font-weight: bold;"></th>
+//		 				<th style="font-family: 黑体;font-size: 14px;font-weight: bold;">实时流量</th>
+//		 			</tr>
+//		 		</thead>
+//		 		<tbody>
+// 											<tr>
+<!-- 											<td>序号</td> -->
+<!--                                             <td>ID</td> -->
+<!-- 											<td>带宽</td> -->
+<!-- 											<td>时延</td> -->
+<!-- 											<td>亲和属性</td> -->
+<!--                                             <td>门限带宽</td> -->
+<!-- 										</tr> -->
+
+			function fillLinkTable(data){
+				var array = $.parseJSON(data).data.linkInfoList;
+				var row = array.length;
+				var i = 0;
+				var uRate = 0.;
+//		 		var bio = Number(array[0].reservableBandwidthBc0);
+				for(i;i<row;i++){
+					var usedBW = array[i].usedBw;
+					var reservableBandwidthBc0 = Number(array[i].reservableBandwidthBc0)+0.;
+					uRate =  100*usedBW/reservableBandwidthBc0;
+					var width = "width:"+uRate+"%";
+					$("#linkTable tbody").append(
+						$('<tr/>',{id:i+1}).append(
+							$('<td/>').text(i+1),
+							$('<td/>').text(array[i].linkName),
+							$('<td/>').text(array[i].reservableBandwidthBc0),
+							$('<td/>').text(array[i].latency),
+							$('<td/>').text(array[i].administrativeGroup),
+							$('<td/>').text(array[i].limitBw)
+						)	
+					)
+				} 		
+			}
+			
+
+			
+			/* =======================Ryan code ends... ====================*/
 		//setInterval('resetTopology()',1000*60*2); 
 		</script>
 	</body>
