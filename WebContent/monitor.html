@@ -144,7 +144,7 @@
 
 							<!-- widget content -->
 							<div class="widget-content">					
-								<table class="table">
+								<table class="table" id="linkStateTable">
 									<thead>
 										<tr>
 											<th>#</th>
@@ -426,6 +426,73 @@
 
 		});
 
+		
+	/* =======================Ryan code begins... ====================*/
+	// about to implement the get data interface..
+		var returnData={
+		  "isSuccess": true,
+		  "code": 200,
+		  "msg": "取数据成功！",
+		  "data": {
+		    "linkInfoList": [
+		      {
+		        "latency": "2000",
+		        "linkName": "R1-R4",
+		        "reservableBandwidthBc0": "200000",
+		        "administrativeGroup": "0x0",
+		        "usedBw": 0,
+		        "limitBw": 0
+		      },
+		      {
+		        "latency": "2000",
+		        "linkName": "R1-R2",
+		        "reservableBandwidthBc0": "200000",
+		        "administrativeGroup": "0x0",
+		        "usedBw": 0,
+		        "limitBw": 0
+		      },
+		      {
+		        "latency": "2000",
+		        "linkName": "R1-R3",
+		        "reservableBandwidthBc0": "200000",
+		        "administrativeGroup": "0x0",
+		        "usedBw": 0,
+		        "limitBw": 0
+		      },
+		      {
+		        "latency": "2000",
+		        "linkName": "R4-R2",
+		        "reservableBandwidthBc0": "200000",
+		        "administrativeGroup": "0x0",
+		        "usedBw": 100000,
+		        "limitBw": 0
+		      },
+		      {
+		        "latency": "2000",
+		        "linkName": "R4-R3",
+		        "reservableBandwidthBc0": "200000",
+		        "administrativeGroup": "0x0",
+		        "usedBw": 100000,
+		        "limitBw": 0
+		      },
+		      {
+		        "latency": "1000",
+		        "linkName": "R2-R3",
+		        "reservableBandwidthBc0": "200000",
+		        "administrativeGroup": "0x0",
+		        "usedBw": 180000,
+		        "limitBw": 0
+		      }
+		    ]
+ 		}
+	};
+	
+	var dictData = $.parseJSON(returnData);
+	var lspInfoList = dictData.linkInfoList;
+	
+	
+	
+	/* =======================Ryan code ends... ====================*/
 	//setInterval('resetTopology()',1000*60*2); 
 	</script>
 
